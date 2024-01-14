@@ -9,5 +9,3 @@ enum class MapDirection(private val string: String, val indicator: String, val u
 
     override fun toString() = string
 }
-
-

@@ -1,18 +1,17 @@
 data class Vector2d(val x: Int, val y: Int) {
+    operator fun compareTo(other: Vector2d): Int {
+        return if (x == other.x) y.compareTo(other.y) else x.compareTo(other.x)
+    }
 
-    fun precedes(other: Vector2d): Boolean = this.x <= other.x && this.y <= other.y
+    operator fun plus(other: Vector2d): Vector2d = Vector2d(x + other.x, y + other.y)
+    operator fun minus(other: Vector2d): Vector2d = Vector2d(x - other.x, y - other.y)
 
-    fun follows(other: Vector2d): Boolean = this.x >= other.x && this.y >= other.y
-
-    fun add(other: Vector2d): Vector2d = Vector2d(this.x + other.x, this.y + other.y)
-
-    fun subtract(other: Vector2d): Vector2d = Vector2d(this.x - other.x, this.y - other.y)
 
     fun upperRight(other: Vector2d): Vector2d = Vector2d(maxOf(this.x, other.x), maxOf(this.y, other.y))
 
     fun lowerLeft(other: Vector2d): Vector2d = Vector2d(minOf(this.x, other.x), minOf(this.y, other.y))
 
-    fun opposite(): Vector2d = Vector2d(-this.x, -this.y)
+    operator fun unaryMinus(): Vector2d = Vector2d(-this.x, -this.y)
 
     override fun toString(): String = "($x,$y)"
 }
