@@ -23,8 +23,3 @@ class Animal(private var pos: Vector2d = Vector2d(0,0)) : WorldElement {
             pos = newPosition
     }
 }
-
-fun main() {
-    val animal = Animal()
-    animal.orientation
-}
