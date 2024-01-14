@@ -2,7 +2,8 @@ import java.util.*
 
 fun main() {
     val map = BouncyMap(2, 2)
-    map.place(Animal( Vector2d(0, 0)))
+    val a = Animal(Vector2d(0, 0))
+    map.place(a)
     map.place(Animal( Vector2d(1, 1)))
 
     println(map.objectAt(Vector2d(0, 0)))
@@ -27,8 +28,7 @@ class BouncyMap(height: Int, width:Int): WorldMap {
     override fun place(animal: Animal) {
         val mapEntry = animals.entries.find { it.value == animal }
         if (mapEntry != null) {
-            animals.remove(mapEntry.value.position)
-            animals[mapEntry.value.position] = mapEntry.value
+            animal.position = mapEntry.key
         } else {
             bouncyPlace(animal)
         }
