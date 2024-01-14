@@ -3,8 +3,9 @@ class Animal(private var pos: Vector2d = Vector2d(0,0)) : WorldElement {
     private set
 
 
-    override val position: Vector2d
+    override var position: Vector2d
         get() = pos
+        set(value) { pos = value }
 
     override fun toString(): String = orientation.indicator
 
