@@ -1,4 +1,4 @@
-# Object-Oriented Programming Coursework at AGH UST 🎓👨‍💻
+# Object-Oriented Programming Coursework at AGH UST
 
 This repository contains the coursework for the Object-Oriented Programming (OOP) course at (AGH UST).
 
@@ -7,7 +7,7 @@ This repository contains the coursework for the Object-Oriented Programming (OOP
 Here's a brief overview of things that were part of the course:
 
 - **Java Basics**: Core syntax of the language.
-- **OOP in Java**: Classes, abstract classes, interfaces. SOLID principles.
+- **OOP in Java**: Classes, abstract classes, interfaces, polymorphism, inheritance, encapsulation, composition. SOLID principles.
 - **Design Patterns**: The main two used in the course were: Observer, Template Method.
 - **GUI Applications**: Creating simple gui applications using JavaFX
 - **Newer java features**: Things like stream api and optionals.
